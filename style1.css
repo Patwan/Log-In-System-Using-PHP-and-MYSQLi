@@ -1,0 +1,641 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*The content is clipped and a scrolling mechanism is provided*/
+html {
+  overflow-y: scroll;
+}
+
+img, object, embed, video{
+	max-width:100%; 
+	height:auto;
+} 
+
+/*Internet Explorer does not suport maxwidth so set default*/
+.ie6 img{
+	width: 100%;
+}
+
+body {
+  background-image: url("images/back3.jpg");
+  background-attachment: fixed;
+  /*links to the google font from the top of each html page*/
+font-family: 'Open Sans', sans-serif;
+}
+
+.upper{
+	background: #f6db9b; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#f6db9b 32%, green); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#f6db9b 32%, green); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#f6db9b 32%, green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#f6db9b 32%, green); /* Standard syntax */
+    background: linear-gradient(#f6db9b 32%, green); /* Standard syntax */
+	width: 1290px;
+	margin: 0 auto;
+	padding:13px;
+	border-radius: 1px 20px;
+}
+/*End*/
+
+/*Specifies the menu-icon*/
+button.icon {
+	display:none;
+	 background-color: #0ca109;
+    background: -webkit-gradient(linear, left top, left bottom, from( #0ca109), to(#50911e));
+    background: -webkit-linear-gradient(top,  #0ca109, #50911e);
+    background: -moz-linear-gradient(top,  #0ca109, #50911e);
+    background: -ms-linear-gradient(top,  #0ca109, #50911e);
+    background: -o-linear-gradient(top,  #0ca109, #50911e);
+    background: linear-gradient(top,  #0ca109, #50911e);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+	margin-top:20px;
+}
+
+button.icon:hover {
+    cursor: pointer;
+	background-color:red;
+}
+/*END*/
+
+.navbar1{
+	width:1000px;
+	text-align:center;
+	margin-top:-11px;
+	margin-bottom:60px;
+	margin-left:160px;
+}
+
+.menu1 ul{
+	/*Removes bullets*/
+	list-style:none;
+
+}
+
+/*Styles active page links*/
+.menu1 ul .active{
+	background: #red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red 20%, green); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red 20%, green); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red 20%, green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red 20%, green); /* Standard syntax */
+    background: linear-gradient(red 20%, green); /* Standard syntax */
+}
+.menu1 ul li{
+	background-color:green;
+	border:1px solid #ffffff;
+	width:173px;
+	height:35px;
+	line-height:35px;
+	margin:auto;
+	text-align:center;
+	/*Makes the list dispaly in a horizontal maneer*/
+	float:left;
+	position:relative;
+	border-radius:8px;
+	font: 15px;
+	font-weight:regular;
+}
+
+.menu1 ul li a{
+	text-decoration:none;
+	color:white;
+	display:block;
+}
+
+
+.menu1 ul li a:hover{
+	background-color:red;
+	border-radius:8px;
+}
+
+.menu1 ul ul{
+	position:absolute;
+	margin-left:-40px;
+	display:none;
+}
+
+.menu1 ul li:hover >ul{
+	display:block;
+}
+
+.menu1 ul ul ul{
+	margin-left:134px;
+	top:0px;
+}
+
+/*Contact*/
+.call{
+	float: right;
+	margin-top:24px;
+	margin-right: 5px;
+}
+
+/*Styles the links*/
+a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+/*Styles links on mouse hover*/
+a:hover {
+  color: #179b77;
+}
+
+/*Styles the form class*/
+.form {
+   background-image: url("images/form.jpg");
+  padding: 40px;
+  border: 1px solid #009900;
+  border-radius: 15px 20px;
+  box-shadow: 7px 7px 7px;
+  max-width: 600px;
+  /*External distance from top is 40 px and the whole container is centered*/
+  margin: 25px auto;
+  /*Radius of all the four corners in one declaration*/
+  border-radius: 10px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+/*Styles the Sign-up and LogIn links at the top of the form*/
+.tab-group {
+  list-style: none;
+  padding: 0;
+  /*Sets all the external distance of the container in one declaration(top, right, bottom, left)*/
+  margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Styles the list within the class tab-group that have got a link(a)*/
+.tab-group li a {
+	/*Displays an element as a block element*/
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  /*Font-color of the list*/
+  color: #a0b3b0;
+  /*The size of the font*/
+  font-size: 20px;
+  font-weight:bold;
+  /*The list will float to the left*/
+  float: left;
+  width: 50%;
+  text-align: center;
+  /*The cursor is a pointer and indicates a link*/
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+/*Styles the list links within the class tab-group on mouse hover*/
+.tab-group li a:hover {
+  background: #e43a01;
+  color: #ffffff;
+}
+
+/*Styles the list links within the class tab-group when active*/
+.tab-group .active a {
+  background: #bf3201;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+/*Styles all h1 header tag NB/= HTML TAGS CAN ALSO BE STYLED AS SHOWN BELOW*/
+h1 {
+  text-align: center;
+  /*The font color*/
+  color: #ffffff;
+  font-size:32px;
+  font-weight: bold;
+  margin: 0 0 40px;
+}
+
+/*Styles all h2 header tags*/
+h2 {
+    text-align: center;
+    color: #1ab188;
+    font-weight: 1000;
+    margin: 0;
+}
+
+/*Styles all span tags*/
+span {
+    color: #1ab188;
+    font-weight: bold;
+}
+
+/*Styles all paragraph tags*/
+p {
+    text-align: center;
+    color: #ffffff;
+    margin: 0px 0px 50px 0px;
+}
+
+/*Acoount not verified in profile.php page*/
+.info {
+	/*Font color within the div*/
+    color: pink;
+	/*Tpe of dispaly of the div*/
+    display: block;
+	/*Aligns text within the div at the center*/
+    text-align: center;
+	/*Internal distance of the div in one declaration(top, right, bottom and left)*/
+    padding: 5px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+	/*Border width, type and color*/
+    border: 1px solid red;
+	/*Background color of the div*/
+    background: #66131c;
+}
+
+label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px;
+}
+
+/*Styles req class inside the label tag*/
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+input, textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+	/*No border*/
+  border: 0;
+  /*An outline is a line that is drawn around elements (outside the borders) to make the element "stand out".*/
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  /*The text-transform property controls the capitalization of text.*/
+  text-transform: uppercase;
+  /*The letter-spacing property increases or decreases the space between characters in a text.*/
+  letter-spacing: .1em;
+  background: #bf3201;
+  color: #ffffff;
+  font: 15px;
+  font-weight:bold;
+  border-radius:12px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+/*Styles the button on hover and when in focus*/
+.button:hover, .button:focus {
+  background: #009900;
+  cursor: pointer;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+
+/* Large laptop screens ----------- */
+@media only screen and (min-width: 1224px)  and (max-width: 1320px) {
+
+/*Upper Container*/
+.upper{
+	
+	width: 98%;
+}
+/*End*/	
+	
+}
+
+/* Large laptop screens ----------- */
+@media only screen and (min-width: 1023px)  and (max-width: 1223px) {
+	/*Upper Container*/
+.upper{
+	
+	width: 98%;
+}
+/*End*/
+
+/*Styles Navigation menu of index.html page*/
+.navbar1{
+	width:100%;
+	margin-left:40px;
+}
+
+/*Styles each list within ul*/
+.menu1 ul li{
+	width:100%;
+	max-width:173px;
+	height:35px;
+	margin:0 auto;
+}
+
+.menu1 ul ul ul{
+	width:173px;
+}
+.menu1 ul li a:hover{
+	background-color:red;
+	border-radius:8px;
+}
+
+.menu1 ul ul{
+	position:absolute;
+	margin-left:-40px;
+	display:none;
+}
+
+.menu1 ul li:hover >ul{
+	display:block;
+}
+
+.menu1 ul ul ul{
+	margin-left:134px;
+	top:0px;
+}
+/*End*/
+	
+}
+
+@media only screen and (min-width: 767px)  and (max-width: 1022px) {
+	/*Upper Container*/
+.upper{
+	
+	width: 98%;
+}
+
+/*Styles Navigation menu of signup and login page*/
+.navbar1{
+	width:100%;
+	margin-left:40px;
+	margin-bottom:79px;
+}
+
+/*Styles each list within ul*/
+.menu1 ul li{
+	width:100%;
+	max-width:153px;
+	height:35px;
+	margin:0 auto;
+}
+
+.menu1 ul ul ul{
+	display:none;
+}
+
+.menu1 ul ul{
+	position:absolute;
+	margin-left:-40px;
+	display:none;
+}
+
+.menu1 ul li:hover >ul{
+	display:none;
+}
+
+.menu1 ul ul ul{
+	margin-left:134px;
+	top:0px;
+}
+/*End*/
+	
+}
+
+@media only screen and (min-width: 481px)  and (max-width: 766px) {
+/*Upper Container*/
+.upper{
+	
+	width: 98%;
+}
+/*Other Pages navbar properties*/
+.navbar1{
+	width:50%;
+	max-width:1000px;
+	text-align:center;
+	margin-top:-8px;
+	margin-bottom:-7px;
+	margin-left:1px;
+}
+
+button.icon{
+	display:inline-block;
+	margin-left:2px;
+}
+
+.menu1 ul li{ 
+	display: none;
+	padding-bottom: 30px;
+	position:relative;
+    z-index: 1;
+	opacity:4;
+	top:-17px;
+	border: 2px solid #444;
+	width: 173px;
+	text-align: center;
+	border-radius: 2px 0 2px 2px;
+}
+.menu1 ul li a:hover{
+	background-color:green;
+	border-radius:8px;
+}
+
+.menu1 ul ul{
+	position:absolute;
+	margin-left:-40px;
+	display:none;
+}
+
+.menu1:hover ul li{
+	display:block;
+}
+
+.menu1 ul ul li{
+	display:none;
+	opacity:0;
+}
+
+
+/*END*/
+
+}
+
+@media only screen and (max-width: 480px){
+
+body{
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(red, green, yellow); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(red, green, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(red, green, yellow); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(red, green, yellow); /* Standard syntax */
+}	
+
+/*Upper Container*/
+.upper{
+	width: 97%;
+	background: #f6db9b; /* For browsers that do not support gradients */
+}
+
+#logo{
+	margin-top:-17px;
+}
+
+#banner{
+	display:none;
+}
+
+.call{
+float: none;
+margin-top:7px;
+margin-right: 0px;
+}
+
+.tab-group li a {
+	font-size:16px;
+}
+
+/*Other Pages navbar properties*/
+.navbar1{
+	width:50%;
+	max-width:1000px;
+	text-align:center;
+	margin-top:-8px;
+	margin-bottom:-7px;
+	margin-left:1px;
+}
+
+button.icon{
+	display:inline-block;
+	margin-left:2px;
+}
+
+.menu1 ul li{ 
+	display: none;
+	padding-bottom: 30px;
+	position:relative;
+    z-index: 1;
+	opacity:4;
+	top:-17px;
+	border: 2px solid #444;
+	width: 173px;
+	text-align: center;
+	border-radius: 2px 0 2px 2px;
+}
+.menu1 ul li a:hover{
+	background-color:green;
+	border-radius:8px;
+}
+
+.menu1 ul ul{
+	position:absolute;
+	margin-left:-40px;
+	display:none;
+}
+
+.menu1:hover ul li{
+	display:block;
+}
+
+.menu1 ul ul li{
+	display:none;
+	opacity:0;
+}
+
+
+/*END*/
+	
+	
+}
